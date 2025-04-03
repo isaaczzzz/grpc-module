@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package echo;
+
+option go_package = "gen/api/echo";
+
+// 定义请求消息
+message EchoRequest {
+  string message = 1;
+}
+
+// 定义响应消息
+message EchoResponse {
+  string message = 1;
+}
+
+// 定义服务
+service EchoService {
+  // 定义服务方法
+  rpc Echo (EchoRequest) returns (EchoResponse);
+}
