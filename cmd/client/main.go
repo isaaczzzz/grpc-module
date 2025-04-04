@@ -43,7 +43,7 @@ func main() {
 	defer cancel()
 	resp, err := client.Echo(ctx, req)
 	if err != nil {
-		log.Fatalf("Could not echo: %v", err)
+		log.Printf("Could not echo: %v", err)
 	}
 
 	log.Printf("Echo response: %s", resp.Message)

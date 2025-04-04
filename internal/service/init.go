@@ -1,11 +1,11 @@
-package services
+package service
 
 type Services struct {
-	EchoService EchoService
+	EchoService IEchoService
 }
 
 func InitServices() *Services {
 	return &Services{
-		EchoService: NewEchoService(),
+		EchoService: newEchoService(),
 	}
 }
